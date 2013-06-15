@@ -1,0 +1,155 @@
+/* font style */
+.fontItalic {font-style:italic;}
+.fontOblique {font-style:oblique;}
+.fontBold{font-weight:bold;}
+.font900{font-weight:900;}
+
+
+/* End basic style rules */
+
+
+
+.wrap{
+	width:802px;
+	margin:0 auto;
+	border:1px #333333 solid;
+	background-color:#CCC;
+	background:url(./marker_sprite.png) no-repeat;
+	background-position:0px 0px;
+	background-attachment:fixed;
+}
+
+#header{
+	display:block;
+	background-color:#999;
+	height:100px;
+}
+
+#header h1{
+	padding:10px 20px;
+	color:#f00;
+	font-size:40px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#navfirst{
+	display:block;
+	background-color:#CCCCCC;
+	height:40px;
+}
+
+#header a:link,#header a:visited,#header a:hover,#header a:active,#navfirst a:link,#navfirst a:visited,#navfirst a:hover,#navfirst a:active{
+	border:none;
+	color:#FFF;
+}
+
+#navfirst li{
+	float:left;
+	width:114px;
+}
+
+#navfirst li a{display:block;padding:10px 10px;}
+
+.menu{
+	padding:10px 10px;
+	margin:5px 10px;
+	border:1px #666666 solid;
+}
+
+.menu li{
+	text-indent:10%;
+}
+
+#sideMenu{
+	list-style:square inside;
+}
+
+#sideMenu a{
+	color:#FF9900;*color:#0CF !important;*color:#00FF66;
+}
+
+.content{ min-height:498px; margin:0 4px 4px 4px;}
+
+.content .left{ 
+	float:left; 
+	background-color:#FFF; 
+	width:194px; 
+	height:498px; 
+	border:1px solid #666;
+}
+
+.content .right{
+	float:right;
+	background-color:#FFF;
+	width:594px;
+	height:498px;
+	overflow:hidden;
+	border:1px solid #666;
+}
+
+.content table,.content th,.content td{border:1px #FF0000 solid}
+
+.content table{
+	width:100%; height:50px;
+	border-collapse:collapse;
+}
+
+.content table caption{caption-side:bottom;}
+
+.content td{
+	height:50px;
+	text-align:right;
+	vertical-align:bottem;
+	padding:15px;
+}
+
+.content th{
+	background-color:#999;
+	color:#FFF;
+}
+
+.right .normal{
+	text-align:justify;
+	word-spacing:1em;
+}
+
+.right .nowrap{
+	white-space:nowrap;
+}
+
+.right .preline{
+	white-space:pre-line;
+}
+
+.right .prewrap{
+	white-space:pre-wrap;
+	font-variant:small-caps;
+}
+
+.right .outline{
+	border:solid thin;
+	border-color:#F00 #000 #0000FF #FFFF00;
+	outline:#00ff00 double thick;
+}
+
+.topPadding,.bottomPadding{
+	width:50px;
+	height:50px;
+	margin:20px;
+	background:#066;
+}
+
+.outer{
+	width:100px;
+	height:100px;
+	background:#00FFFF;
+	margin-top:20px;
+}
+.inner{
+	width:50px;
+	height:50px;
+	background:#6666FF;
+	margin-top:10px;
+}
+
+.right img{ float:left;}

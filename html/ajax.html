@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/init.css" type="text/css" rel="stylesheet" />
+<link href="../css/ajax.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" language="javascript" src="../js/kcore.js"></script>
+<!--<script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>-->
+</head>
+
+<body>
+<div>
+<textarea name="" id="txtbox" class="txtbox"></textarea>
+<input type="button" class="start" id="start" value="开 始" />
+</div>
+<a href="#">adfds</a>
+<script type="text/javascript" language="javascript">
+
+document.getElementById('start').onclick=function(){
+//	var a=getEle('txtbox');
+//	a.show();
+	alert(kl.abc())
+}
+
+function getEle(id){
+	var els=[];
+	
+	els.push(el);
+	
+	init(els);
+	
+	return el;
+	
+	function init(els)
+	{
+		for(var i in els){
+			els[i].show=function(){
+				alert(this.className);
+			}
+		}
+	}
+	
+	function getClass(name)
+	{
+		return document.getElementsByClassName(name);
+	}
+	
+	function getId(id)
+	{
+		return document.getElementById(id);
+	}
+}
+</script>
+</body>
+</html>

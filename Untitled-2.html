@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.wrapper{
+    margin:0 auto;
+    width:998px;
+}
+.autojump{
+    text-align:center;
+}
+#inputlink{
+    width:300px;
+}
+</style>
+<script src="js/JQuery_lite.js" type="text/javascript" language="javascript"></script>
+<script src="js/ajax.js" type="text/javascript" language="javascript"></script>
+<script src="js/ajax2.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+    	<div class="autojump">
+
+                請輸入google link: <input type="text" id="inputlink" value="" /><br />
+                <a href="#" id="golink" target="_blank">nolink</a>
+
+        </div>
+	</div>
+
+<script type="text/javascript" language="javascript">
+window.onload=function(){
+	autorunit();
+}
+
+document.getElementById("inputlink").onkeyup=function(event){
+	var regResult=this.value.match(/\&url=(.*)\&ei=/);
+	var links='';
+	if(regResult!==null){
+		links=decodeURIComponent(regResult[1]);
+		document.getElementById('golink').href=links;
+		document.getElementById('golink').innerHTML=decodeURIComponent(links);
+	}else{
+		document.getElementById('golink').href="#";
+		document.getElementById('golink').innerHTML="nolink";
+	}
+	enterFunc(event,function(){document.getElementById("golink").click();});
+	return;
+}
+
+document.getElementById("inputlink").onfocus=function (){
+	this.value='';
+}
+
+function autorunit(){
+	var autorun=window.setInterval(autoShowLink,1000);
+}
+
+function autoShowLink(){
+	var ach=document.getElementById('golink')
+	var val=ach.getAttribute('href');
+	if(val=='nolink' || val=='#' || !val){
+		ach.style.display='none';
+	}else{
+		ach.style.display='';
+	}
+	return;
+}
+
+function enterFunc(e,fn){
+	var event=e || window.event;
+	if(event.keyCode===13){
+		fn();
+	}
+	return;
+}
+
+function strlen(str){
+	var len=str.length;
+	document.getElementById('txtbox').value=str;
+	return str.replace(/[^\x00-\xff]/g,"xx").length; 
+}
+var str='發';
+console.log(str.charCodeAt(0).toString(16)+" "+str.charAt(0)+' '+escape(str));
+</script>
+</body>
+</html>

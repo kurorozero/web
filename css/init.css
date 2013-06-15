@@ -1,0 +1,117 @@
+@charset "utf-8";
+/*@import url(font.css);*/
+/** Init basic style rules 初始化基本样式规则 **/
+
+/** 清除内外边距 **/  
+body, h1, h2, h3, h4, h5, h6, hr, p,  
+blockquote, /* structural elements 结构元素 */  
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */  
+pre, /* text formatting elements 文本格式元素 */  
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */  
+th, td, /* table elements 表格元素 */  
+img/* img elements 图片元素 */{  
+	border:medium none;
+	margin:0;
+	padding:0;
+}
+
+/** default font 设置默认字体 **/  
+body,button, input, select, textarea {
+	font:300 13px/160% Verdana, Arial, Geneva, sans-serif;
+	white-space:normal;
+/*	text-align:left;*/
+}
+
+/** reset image border 重置图片元素 **/  
+img{ border:0px;}
+
+/** reset table 重置表格元素 **/  
+table { 
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {font-size: 100%;}  
+em{font-style:normal;}
+
+/** reset list 重置列表元素 **/  
+ul, ol, li{list-style:none;}
+
+/** reset ach 重置超链接元素 **/  
+a{
+	outline:none;/*  without IE去除虚线*/
+	blr:expression(this.onFocus=this.blur());/* with IE去除虚线 会影响效率 */
+	cursor:pointer;
+}
+
+/*a:link,a:visited,a:active,a:hover{color:#000;} 控制颜色 */
+a:link,a:visited,a:active{
+	text-decoration: none;/* 去除标签下划线 */
+	/*text-decoration:underline;/* 显示下下划线 */
+}
+a:hover{
+	text-decoration: none;/* 去除标签下划线 */
+	/*text-decoration:underline; 显示下下划线 */
+}
+
+/** float box 盒子浮动 **/
+.left{float:left;}
+.right{float:right;}
+
+/** clear float 清除浮动 **/
+.clr{
+	clear:both;
+	height:0;
+	line-height:none;
+	overflow:hidden;
+	width:100%;
+    zoom:1;
+}
+
+.clearfix:after{
+    clear:both;
+    content:" ";
+    display:block;
+    height:0;
+    line-height:none;
+    overflow:hidden;
+    visibility:hidden;
+    width:100%;
+    zoom:1;
+}
+
+/** isblock 是否块状元素 **/
+.block{display:block;}
+.inline{display:inline;}
+.hide{display:none;}
+
+/** posittion 元素定位 **/
+.rel{position:relative;}
+.abs{position:absolute;}
+.fix{position:fixed;}
+
+
+/** auto center 自动居中 **/
+#wrapper,.wrapper{
+	margin:0 auto;
+}
+
+/* create Rounded 生成四圆角 */
+.rad{
+	-moz-border-radius: 15px; /* Firefox */
+	-webkit-border-radius: 15px; /* Safari 和 Chrome */
+	border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+
+/** 生成陰影 **/
+.shadow{
+    -moz-box-shadow:0 5px 15px #000;
+    -webkit-box-shadow:0 5px 15px #000;
+    box-shadow:0 5px 15px #000;
+}
+
+.rad,.shadow{
+    position:relative;
+	z-index:100;
+    behavior:url(../css/ie-css3.htc);
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.scroll{
+    background:#09F;
+    height:200px;
+    position:relative;
+    width:300px;
+}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:absolute;
+}
+</style>
+<script type="text/javascript" language="javascript">
+function addEventSimple(obj,evt,fn){
+	if(obj.addEventListener){
+		obj.addEventListener(evt,fn,false);
+	}else if(obj.attachEvent){
+		obj.attachEvent('on'+evt,fn);
+	}
+}
+
+//addEventSimple(window,'load',initScrolling);
+addEventSimple(window,'load',scrollbox);
+
+function scrollbox(){
+	var box=document.getElementById('xst');
+	var inbox=document.getElementById('content');
+	var boxHeight=box.offsetHeight;
+
+	var listHeight=0;
+	var autorun=null;
+	function init(){
+		box.style.overflow = "hidden";
+		box.style.position="relative";
+		inbox.style.position='absolute';
+		if(boxHeight<inbox.offsetHeight){
+			inbox.innerHTML+=inbox.innerHTML;
+			var aLi=box.getElementsByTagName('li');
+			for(var i in aLi){
+				if(aLi[i].nodeType){
+					listHeight+=aLi[i].offsetHeight;
+				}
+			}
+			
+			autorun=window.setInterval(scrollrun,100);
+		}
+		return;
+	}
+	
+	function scrollrun(){
+		var listtop=Math.abs(inbox.style.top.replace('px',''))+2;
+		document.getElementById('test1').innerHTML=box.offsetHeight;
+		if(listtop>listHeight-boxHeight){
+			inbox.style.top=(boxHeight-Math.round(inbox.offsetHeight/2))+'px';
+		}else{
+			inbox.style.top=(0-listtop)+'px';
+		}
+		return;
+	}
+	
+	return init();
+}
+
+var scrollingBox;
+var scrollingInterval;
+var reachedBottom=false;
+var bottom;
+
+function initScrolling(){
+	scrollingBox = document.getElementById('xst');
+	scrollingBox.style.overflow = "hidden";
+	scrollingInterval = setInterval("scrolling()",50);
+	scrollingBox.onmouseover = over;
+	scrollingBox.onmouseout = out; 
+}
+
+function scrolling(){
+	var origin = scrollingBox.scrollTop++;
+	if(origin == scrollingBox.scrollTop){
+		if(!reachedBottom){
+			scrollingBox.innerHTML+=scrollingBox.innerHTML;
+			reachedBottom=true;
+			bottom=origin;
+		}else{
+			scrollingBox.scrollTop=bottom;
+		}
+	}
+}
+
+function over(){
+	clearInterval(scrollingInterval);
+}
+function out(){
+	scrollingInterval = setInterval("scrolling()",50);
+}
+
+</script>
+</head>
+<body>
+<span id="test1"></span>
+<div class="scroll" id="xst">
+	<ul id="content">
+	<li>1111111開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+        <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+            <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    <li>薩拉打開附加阿隆索寬帶計費拉薩</li>
+    </ul>
+</div>
+</body>
+</html>

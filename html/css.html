@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学习CSS用的html</title>
+<link type="text/css" rel="stylesheet" href="../css/init.css" />
+<link type="text/css" rel="stylesheet" href="../css/learn_css.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="../js/kcore.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="header"><h1><a href="#">w3school在线教程</a></h1></div>
+    <div id="navfirst" class="center">
+        <ul id="menu">
+            <li id="h"><a href="#" title="html教程">html教程</a></li>
+            <li id="x"><a href="#" title="XML教程">XML教程</a></li>
+            <li id="b"><a href="#" title="浏览器脚本">浏览器脚本</a></li>
+            <li id="s"><a href="#" title="服务器脚本">服务器脚本</a></li>
+            <li id="d"><a href="#" title="dot net教程">dot net教程</a></li>
+            <li id="m"><a href="#" title="多媒体教程">多媒体教程</a></li>
+            <li id="w"><a href="#" title="建站手册">建站手册</a></li>
+        </ul>
+    </div>
+    <div class="content">
+    	<div class="left">
+            <div class="menu">
+                <ul id="sideMenu">
+                    <li id="h"><a href="/h.asp" title="html教程">html教程</a></li>
+                    <li id="x"><a href="/x.asp" title="XML教程">XML教程</a></li>
+                    <li id="b"><a href="/b.asp" title="浏览器脚本">浏览器脚本</a></li>
+                    <li id="s"><a href="/s.asp" title="服务器脚本">服务器脚本</a></li>
+                    <li id="d"><a href="/d.asp" title="dot net教程">dot net教程</a></li>
+                    <li id="m"><a href="/m.asp" title="多媒体教程">多媒体教程</a></li>
+                    <li id="w"><a href="/w.asp" title="建站手册">建站手册</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+        	
+        	<p class="normal ">text-align:justify; 正常字体 字体对齐方式按照左右对齐 word-spacing:1em; 字距1只字</p>
+            <p class="nowrap">nowrap 字体过长 不可以自动换行~~~~  ~~~~ ~~~~ ~~~~~~ ~~~ ~ ~~~ ~~~~ ~~~~ ~~~~ ~~~ ~~~~ ~~~~ ~~~~~ ~~ ~~~~ ~~~ ~~~~ ~~~~</p>
+            <p class="prewrap fontOblique">
+            	white-space:pre-wrap;保留空白符   保留换行符    可以自动换行
+            	font-style:oblique;字体倾斜   字体按照正常整体倾斜
+                font-variant:small-caps; 字体缩小后小写变成大写字体
+            </p>
+            <p class="preline fontItalic">
+            	white-space:pre-line;合拼空白符    保留换行符   可以自动换行
+            	font-style:italic;字体倾斜   字体改变结构倾斜
+            </p>
+            <p>
+            	<span class="font900">font-weight:normal;font-weight:bold;font-weight:900;关键字 100 ~ 900 为字体指定了 9 级加粗度。如果一个字体内置了这些加粗级别，那么这些数字就直接映射到预定义的级别，100 对应最细的字体变形，900 对应最粗的字体变形。</span>
+            	<span class="fontBold">数字 400 等价于 normal，而 700 等价于 bold。如果将元素的加粗设置为 bolder，浏览器会设置比所继承值更粗的一个字体加粗。与此相反，关键词 lighter 会导致浏览器将加粗度下移而不是上移。</span>
+			</p>
+            <p class="outline">
+            	outline:#00ff00 dotted thick;这是轮廓   绿色  粗字
+            </p>
+            <img width="30px" src="0222-1.jpg" />
+            <p>啊萨拉打开附加啊萨拉打开附加阿里斯顿开发就阿斯兰块地方就阿隆索看到房价阿斯兰块地方就阿里斯顿会计法思考的法拉克三等奖佛拉开萨大家来反抗就啊塑料袋看风景阿隆索宽带计费啦</p>
+            <div class="clr"></div>
+            <table>
+            	<caption>这是表格标题</caption>
+            	<tr>
+            		<th>table header1</th>
+                    <th>table header2</th>
+                </tr>
+                <tr>
+					<td>table d</td>
+                    <td>table d</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<fieldset>
+<legend>随直外边框margin合拼</legend>
+只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并。
+<div>
+    <div class="topPadding"></div>
+    <div class="bottomPadding"></div>
+</div>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+
+<div class="noneEl"></div>
+</fieldset>
+</body>
+</html>

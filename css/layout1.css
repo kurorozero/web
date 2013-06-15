@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*@import url(init.css);*/
+/* wrap 外围层 */
+body{
+	width:100%;
+	background:#CCC;
+}
+
+.wrap{
+	margin:0 auto;
+	background:#CCC;
+}
+
+.wrap,.header,.footer,.top_box,.mid_box,.bottom_box{
+	width:998px;
+}
+
+/* header 头部内容 footer 页脚内容 */
+.header,.footer{
+	height:130px;
+	background:#FFF;
+}
+
+.footer{
+	height:200px;
+}
+
+/* content 内容 */
+.top_box .box{
+	width:479px;
+}
+
+.bottom_box .box{
+	width:312px;
+}
+
+.top_box .box,.bottom_box .box{
+	min-height:300px;
+	height:auto !important;/* ie6下min-height属性bug */
+	height:300px;
+	margin:10px;
+	float:left;
+	background:#FFF;
+}
+
+/* fixed ie6 margin bug IE6双倍margin值得问题 */
+.bottom_box .box,.top_box .box{
+	display:inline;
+}
+
+/* define the list 定义list样式 */
+.top_box .box ul,.bottom_box .box ul{
+	padding:15px;
+}
+
+/* middle banner 中间横幅 */
+.mid_box{
+	height:100px;
+	background:#99F;
+}

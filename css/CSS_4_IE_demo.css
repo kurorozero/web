@@ -1,0 +1,60 @@
+.box {
+  -moz-border-radius: 15px; /* Firefox */
+  -webkit-border-radius: 15px; /* Safari 和 Chrome */
+  border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+
+  -moz-box-shadow: 10px 10px 20px #000; /* Firefox */
+  -webkit-box-shadow: 10px 10px 20px #000; /* Safari 和 Chrome */
+  box-shadow: 10px 10px 20px #000; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+
+  behavior: url(ie-css3.htc); /* 通知IE浏览器调用脚本作用于'box'类 */
+}
+
+/*
+
+What is it?
+IE-CSS3 is a script to provide Internet Explorer support for some new styles available in the upcoming CSS3 standard.
+
+How it works
+If you're viewing this page in Internet Explorer, some of the elements have been rebuilt by the script in Vector Markup Language (VML), an IE-specific vector drawing language. VML supports things that are missing from IE's CSS implementation like rounded corners and blur effects.
+
+How to use it
+Just add CSS styles as you normally would, but include one new line:
+
+.box {
+  -moz-border-radius: 15px; /* Firefox 
+  -webkit-border-radius: 15px; /* Safari and Chrome 
+  border-radius: 15px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 
+
+  -moz-box-shadow: 10px 10px 20px #000; /* Firefox 
+  -webkit-box-shadow: 10px 10px 20px #000; /* Safari and Chrome 
+  box-shadow: 10px 10px 20px #000; /* Opera 10.5+, future browsers and IE6+ using IE-CSS3 
+
+  behavior: url(ie-css3.htc); /* This lets IE know to call the script on all elements which get the 'box' class 
+}
+Issues and Workarounds
+You would expect URLs in behavior: url(...) to be relative to the current directory as they are in a background-image: url(...) style for example, but instead Microsoft decided to ignore standards here and make them relative to the docroot instead. So behavior: url(ie-css3.htc) should work if ie-css3.htc is in the root directory of the site.
+
+You will probably run into issues with z-index, especially if embedding one IE-CSS3 enabled element inside of another. There are two simple workarounds:
+Set the z-index of the IE-CSS3 element to a number larger than its surrounding elements.
+Make sure the IE-CSS3 element is positioned, such as with position: relative or position: absolute
+Sometimes an IE-CSS3 element will show up at a slightly different position than the original, untouched element. There could be a few reasons for this:
+You have broken tags somewhere in your markup, probably above the IE-CSS3 element.
+You are experiencing misc IE6 and IE7 bugs. Try adding the styles zoom: 1 and/or position: relative to the IE-CSS3 element and its immediate parent. You could also try removing any margins on the IE-CSS3 element and/or its parent, use padding instead.
+Styles and their status
+Style	What works	What doesn't work
+border-radius	
+Setting a radius for all four corners
+Element borders
+Setting a radius for individual corners separately
+box-shadow	
+Blur size
+Offset
+Any color other than #000
+text-shadow	
+Blur size
+Offset
+Color
+The shadow looks a little bit different than it does in FF/Safari/Chrome, I'm not sure why
+
+*/

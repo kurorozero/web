@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="../css/init.css" />
+<style type="text/css">
+img{width:500px;}
+</style>
+<script type="text/javascript" src="../js/jquery-1.6.4.min.js"></script>
+<!--<script async defer type="text/javascript" src="../js/zero.js"></script>-->
+<script async defer type="text/javascript">
+$(window).bind('load',function(){
+	console.log('windowLoaded');
+	preLoadImages();
+});
+
+$(function(){
+	console.log('DOMContentLoaded');
+});
+
+function preLoadImages(){
+	var imgPreLoader = [],
+	imgArr = ['../images/IMG_1422.jpg',
+				'../images/IMG_1418.jpg',
+				'../images/IMG_1419.jpg',
+				'../images/IMG_1420.jpg',
+				'../images/IMG_1421.jpg'];
+	for(var i=0,shu=imgArr.length;i<shu;i++){
+		imgPreLoader[i]=document.createElement('img');
+		imgPreLoader[i].src=imgArr[i];
+	}
+	console.log('我異步運行');	
+}
+console.log('我正常運行');
+</script>
+<script async defer type="text/javascript">
+//var imgPreLoader = [],
+//imgArr = ['../images/IMG_1413.jpg',
+//			'../images/IMG_1414.jpg',
+//			'../images/IMG_1415.jpg',
+//			'../images/IMG_1416.jpg',
+///*			'../images/IMG_1417.jpg',
+//			'../images/IMG_1418.jpg',
+//			'../images/IMG_1419.jpg',
+//			'../images/IMG_1420.jpg',
+//			'../images/IMG_1421.jpg',
+//			'../images/IMG_1422.jpg',
+//			'../images/IMG_1423.jpg',
+//			'../images/IMG_1424.jpg',
+//			'../images/IMG_1425.jpg',
+//			'../images/IMG_1426.jpg',*/
+//			'../images/IMG_1427.jpg'];
+//for(var i=0,shu=imgArr.length;i<shu;i++){
+//	imgPreLoader[i]=document.createElement('img');
+//	imgPreLoader[i].src=imgArr[i];
+//}
+//console.log('哈哈');
+</script>
+</head>
+<body>
+<div class="wrapper" id="insertImages">
+	<div><img src="../images/920px.jpg"></div>
+	<div><img src="../images/IMG_1413.jpg"></div>
+    <div><img src="../images/IMG_1414.jpg"></div>
+    <div><img src="../images/IMG_1415.jpg"></div>
+    <div><img src="../images/IMG_1416.jpg"></div>
+    <div><img src="../images/IMG_1417.jpg"></div>
+<!--    <div><img src="../images/IMG_1418.jpg"></div>
+    <div><img src="../images/IMG_1419.jpg"></div>
+    <div><img src="../images/IMG_1420.jpg"></div>
+    <div><img src="../images/IMG_1421.jpg"></div>
+    <div><img src="../images/IMG_1422.jpg"></div>
+    <div><img src="../images/IMG_1423.jpg"></div>
+    <div><img src="../images/IMG_1424.jpg"></div>
+    <div><img src="../images/IMG_1425.jpg"></div>
+    <div><img src="../images/IMG_1426.jpg"></div>
+    <div><img src="../images/IMG_1427.jpg"></div>-->
+</div>
+</body>
+</html>

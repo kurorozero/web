@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../css/init.css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+    width:100%;
+    margin: 0 auto;
+    border: 0;
+    background-color: #FFF;
+}
+
+#wrapper{
+    width:998px;
+    margin: 0 auto;
+    box-shadow:#333 0px 5px 5px;
+    border: 0;
+    background-color: #FFF;
+}
+#header{
+    height:60px;
+}
+#header, 
+#footer {
+    background:#333;
+    display:block;
+}
+#footer{
+    color:#FFF;
+    text-align: center;
+    clear: both;
+    padding:10px 10px 20px;
+}
+#footer p{
+    padding:10px 0;
+}
+
+#footer p a{
+    color:#FFF;
+}
+
+#mid {
+    width: 260px;
+    float: left;
+}
+#left {
+    width:200px;
+    float: left;
+    position: relative;
+    margin-left:-261px;
+    padding:0 30px;
+
+}
+#right {
+    border-left: 1px solid #ccc;
+    width: 737px;
+    float: right;
+    position: relative;
+    margin-right: -738px;
+}
+
+
+#left li a{
+    display:block;
+    height:50px;
+    width:200px;
+}
+
+#left li{
+    display:block;
+    margin:10px 0;
+}
+
+#left li a{
+    background:#F90;
+    border-radius:5px;
+    box-shadow:#666 2px 2px 2px;
+    color:#FFF;
+    display:table-cell;
+    font:600 16px/1.2 Arial, Helvetica, sans-serif;
+    text-align:center;
+    text-shadow:#333 1px 1px 2px;
+    vertical-align:middle;
+    *position:relative;
+}
+
+#left li a p{
+    *position:absolute;
+    *left:0;
+    *top:50%;
+    width:100%;
+}
+
+#left li a span{
+    *position:relative;
+    *top:-50%;
+}
+
+#left li a,
+#left li a p,
+#left li a span{*display:block;}/* 由於ie不支持display:table-cell; */
+
+.content{
+    padding:20px 19px 20px 20px;/* 由於ie寬度包括內邊框和邊框 */
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="header">
+head
+</div>
+<div id="container">
+    <div id="mid">
+        <div id="right">
+            <div id="left">
+                <ul>
+                <li><a class="btn" href="#"><p><span>Button 1</span></p></a></li><li><a class="btn" href="#"><p><span>Button 2</span></p></a></li><li><a class="btn" href="#"><p><span>Button 3</span></p></a></li><li><a class="btn" href="#"><p><span>Button 4<br />Button 4</span></p></a></li>
+                </ul>
+            </div>
+            <div class="content">
+            	<div>demo包括有2列自適應高度 單行或者多行自動居中樣式</div>
+                <div><img src="../images/920px.jpg" width="698" /></div>
+                <p>Web design has changed in the last few years, and CSS is at the center of that change. The focus is now on structure first, rather than presentation, so that content is clean and free of the mass of presentation tags such as FONT and table tags that ten years of presentation driven "killer Web sites" have left us with. <br /></p>
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>
+<div id="footer">
+    <p>
+        <a href="#" target="_blank">Legal Notice</a> | 
+        <a href="#" target="_blank">Privacy Policy</a> | 
+        <a href="#" target="_blank">Infringement Notification</a> | 
+        <a href="#" target="_blank">Disclaimer</a> | 
+        <a href="#" target="_blank">Technical Support &amp; FAQ</a> | 
+        <a href="#">Sitemap</a> | 
+        <a href="#" target="_blank">Contact Us</a>
+    </p>
+    <p>&copy; 2013 XXX Limited. All rights reserved</p>
+</div>
+</div>
+</body>
+</html>

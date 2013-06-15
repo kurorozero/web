@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+body{
+	width:100%;
+	background:#333;
+}
+
+.wrapper,.header,.footer{
+	width:960px;
+	position:relative;
+}
+
+.header,.footer{
+	background:#000;
+	height:100px;
+}
+
+.footer{
+	height:150px;
+}
+
+/* 大框向左边浮动,宽度设为左边框宽度,负责左边背景,目地为了右框高度改变时外框负责左框背景自适应高度 */
+.content{
+	background:#96F;
+	float:left;
+	width:480px;
+}
+
+/* 左框高度改变时包含左框内容的右框高度和背景自适应改变  */
+.content .right .left{
+	
+	margin-left:-480px;
+	position:relative;
+	width:480px;
+}
+
+.content .right{
+	background:#09F;
+	position:relative;
+	margin:0 -480px 0 0;
+	width:480px;
+}
+
+a:hover{
+	color:#F00;
+}
+
+p:hover{
+	color:#F00;
+}

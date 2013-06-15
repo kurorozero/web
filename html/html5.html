@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <link href="../css/html5.css" type="text/css" rel="stylesheet" />
+    <!--<script type="text/javascript" language="javascript" src="html5media.min.js"></script>-->
+    <script type="text/javascript" language="javascript" src="../js/kcore.js" ></script>
+    <!--<base href="http://www.w3school.com.cn/i/" />-->
+</head>
+<body>
+	<div class="nav">
+    	<nav>
+        	<a href="javascript:void(0);">home</a>
+            <a href="javascript:void(0);">aboutus</a>
+            <a href="http://localhost/test/html5.html#testFrm">contactus</a>
+        </nav>
+        <div class="clear"></div>
+    </div>
+	<div class="newInputTest">
+    	<form action="#" method="post" enctype="multipart/form-data" name="testFrm" id="testFrm" class="testFrm" autocomplete="on">
+        <table border="1" class="html5table">
+            <tr>
+                <th colspan="2">
+                    <samp>
+                        autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, datepickers, range 以及 color。
+                        novalidate 属性规定在提交表单时不应该验证 form 或 input 域。
+                    </samp>
+                </th>
+            </tr>
+            <tr>
+            	<th class="th">文本輸入框</th>
+                <td>
+                    <div>email：<input type="email" name="usr_mail" value="" autocomplete="off" autofocus onforminput="alert('aa')" /><span class="block">autofocus 属性规定在页面加载时，域自动地获得焦点。</span></div>
+                    <div>url：<input type="url" name="user_url" value="" placeholder="www.google.com" /><span class="block">placeholder 属性提供一种提示（hint），描述输入域所期待的值。</span></div>
+                    <div>number：<input type="number" name="points" min="1" max="10" step="3" value="" required /><span class="block">required 属性规定必须在提交之前填写输入域（不能为空）。</span></div>
+                    <div>range：<input type="range" name="points2" min="1" max="10" step="3" value="" /></div>
+                    <div>search：<input type="search" name="search" value="" pattern="[A-Za-z0-9]+" /><span class="block">pattern 属性规定用于验证 input 域的模式（pattern）。</span></div>
+                    <div>image：<input type="file" name="img" multiple /><span class="block">multiple 属性规定输入域中可选择多个值。</span></div>
+                    <div>draggable：<input type="text" name="dragtext" value="" draggable="false" /><span class="block">draggable 规定是否允许用户拖动元素。</span></div>
+                    <div>normal:<input type="text" name="" value="" oninput="alert(this.value)" ondrag="alert(this.innerHTML)" /></div>
+                    <p draggable="false" contenteditable="true">规定是否允许用户拖动元素。</p>
+                    <p dropzone="link" contenteditable="true">规定当被拖动的项目/数据被拖放到元素中时会发生什么。</p>
+                    <progress id="progress"></progress>
+                </td>
+            </tr>
+            <tr>
+            	<th>日期輸入框<div>date picker</div></th>
+                <td>
+                    <div>Date：<input type="date" name="user_date" value="" /></div>
+                    <div>Month: <input type="month" name="user_date" /></div>
+                    <div>Week: <input type="week" name="user_date" /></div>
+                    <div>Time: <input type="time" name="user_date" /></div>
+                    <div>Date and time: <input type="datetime" name="user_date" /></div>
+                    <div>Date and time: <input type="datetime-local" name="user_date" /></div>
+                </td>
+            </tr>
+            <tr>
+            	<th></th>
+                <td>
+                    <input type="submit" />
+                    <input type="submit" formaction="index.php" value="管理员登录更改form action" />
+                    <input type="submit" formnovalidate value="不验证提交" />
+                    <output name="sum"></output>
+                </td>
+            </tr>
+        </table>
+		</form>
+
+        <fieldset>
+            <legend>html5新的公共屬性</legend>
+            <article>
+                <p contenteditable="true">contenteditable p標籤是否允許用戶編輯內容</p>
+                <p contenteditable="true" spellcheck="true">spellcheck 属性规定是否对元素内容进行拼写检查。</p>
+                <p>html5 新公共屬性hidden,後面是一個隱藏的元素(<span hidden="true">啊阿嬌阿嬌阿嬌阿嬌阿嬌</span>)</p>
+                <p dir="rtl">dir="rtl"规定元素中内容的文本方向。</p>
+            </article>
+
+        </fieldset>
+
+
+        <article>
+            <a href="http://www.apple.com">Safari 5 released</a>
+            7 Jun 2010. Just after the announcement of the new iPhone 4 at WWDC, 
+            Apple announced the release of Safari 5 for Windows and Mac......
+            <address>
+                Written by W3School.com.cn<br />
+                Block A  Floor 3,<br />
+                on the Streets
+            </address>
+        </article>
+        <em>呈现为被强调的文本。</em>
+        <strong>定义重要的文本。</strong>
+        <dfn>定义一个定义项目。</dfn>
+        <code>定义计算机代码文本。</code>
+        <samp>定义样本文本。</samp>
+        <kbd>定义键盘文本。它表示文本是从键盘上键入的。它经常用在与计算机相关的文档或手册中。</kbd>
+        <var>定义变量。您可以将此标签与 &lt;pre&gt; 及 &lt;code&gt; 标签配合使用。</var>
+        <cite>定义引用。可使用该标签对参考文献的引用进行定义，比如书籍或杂志的标题。</cite>
+        <p contenteditable="true">Here is a quote from WWF's website:
+            <blockquote cite="http://www.wwf.org">
+                <mark>WWF's ultimate goal</mark> is to build a future where people live in harmony with nature.
+                <blockquote cite="http://www.wwf.org">
+                    WWF's ultimate goal is to build a future where people live in harmony with nature.
+                    <blockquote cite="http://www.wwf.org">
+                        WWF's ultimate goal is to build a future where people live in harmony with nature.
+                    </blockquote>
+                </blockquote>
+            </blockquote>
+            We hope that they succeed.
+        </p>
+        <dl>
+            <dt>单人间</dt>
+            <dd>399 元 <small>含早餐，不含税</small></dd>
+            <dt>双人间</dt>
+            <dd>599 元 <small>含早餐，不含税</small></dd>
+        </dl>
+        <details>
+            <summary>show my data</summary>
+            阿隆索宽带计费拉斯卡的房间拉萨肯德基发拉萨肯德基发拉萨肯德基发拉萨肯德基法律卡三等奖佛卢卡斯的肌肤拉萨肯德基法律
+        </details>
+    </div>
+    <div class="textbox">
+        <fieldset class="fs1">
+            <legend>隊列標籤</legend>
+            <select autofocus multiple="multiple" form="testFrm">
+                  <optgroup label="Swedish Cars">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab" selected="selected" label="ss">Saab</option>
+                  </optgroup>
+            
+                  <optgroup label="German Cars">
+                      <option value="mercedes" disabled="disabled">Mercedes</option>
+                      <option value="audi">Audi</option>
+                  </optgroup>
+            </select>
+            <menu type="contextmenu" autosubmit label="哈哈菜单">
+                <li><input type="checkbox" />menuItem1</li>
+                <li><input type="checkbox" />menuItem2</li>
+            </menu>
+            <ul>
+                <li><input type="checkbox" />listItem1</li>
+                <li><input type="checkbox" />listItem2</li>
+            </ul>
+            <ol start="0">
+                <li><input type="checkbox" />listItem1</li>
+                <li><input type="checkbox" />listItem2</li>
+            </ol>
+            <input list="cars" /><!--类似autocompeleted-->
+            <datalist id="cars">
+                <option value="BMW">
+                <option value="Ford">
+                <option value="Volvo">
+            </datalist>
+            <div>
+                <input type="text" name="lname" form="testFrm" style="width:200px;" value="這是testFrm的其中一個輸入框" />
+                属性规定输入域所属的一个或多个表单。form 属性必须引用所属表单的 id
+            </div>
+        </fieldset>
+    </div>
+    
+
+    <div class="mediaTest">
+        <video width="320" height="240" controls autoplay preload="auto" loop >
+          <source src="movie.ogg" type="video/ogg">
+          <source src="movie.mp4" type="video/mp4">
+          <track kind="subtitles" src="subs_chi.srt" srclang="zh" label="Chinese"><!--字幕文件引用-->
+          <track kind="subtitles" src="subs_eng.srt" srclang="en" label="English">
+        	你的浏览器不支持video播放哦
+        </video>
+        
+        <audio width="200" height="100" controls preload="auto" loop autoplay="autoplay">
+            <source src="song.ogg" type="audio/ogg">
+            <source src="song.mp3" type="audio/mpeg">
+        	你的浏览器不支持audio播放哦
+        </audio>
+    </div>
+    <div class="canvasTest">
+        <canvas id="cv" width="200" height="100">
+        	你的浏览器不支持canvas图形哦
+        </canvas>
+        <canvas id="yuan" width="200" height="100">
+        	你的浏览器不支持canvas图形哦
+        </canvas>
+        <canvas id="c3" width="200" height="100">
+        	你的浏览器不支持canvas图形哦
+        </canvas>
+        <canvas id="imgCanvas" width="200" height="100">
+        	你的浏览器不支持canvas图形哦
+        </canvas>
+    </div>
+<script type="application/x-javascript" language="javascript">
+(function(){
+	var cv=document.getElementById('cv');
+	var cv2d=cv.getContext('2d');
+	cv2d.fillStyle="#00FF00";
+	cv2d.fillRect(0,0,200,100);
+	cv2d.moveTo(10,10);
+	cv2d.lineTo(50,10);
+	cv2d.lineTo(0,100);
+	cv2d.stroke();
+})();
+
+(function(){
+	var c2=document.getElementById('yuan').getContext('2d');
+	c2.fillStyle="#FF0000";
+	c2.beginPath();
+	c2.arc(100,50,30,0,Math.PI*2,true);
+	c2.closePath();
+	c2.fill();
+})();
+
+(function(){		
+	var c3=document.getElementById('c3').getContext('2d');
+	var c3xt=c3.createLinearGradient(0,0,175,50);
+	c3xt.addColorStop(0,"#FFFFFF");
+	c3xt.addColorStop(1,"#000000");
+	c3.fillStyle=c3xt;
+	c3.fillRect(0,0,175,50);
+})();
+
+(function(){
+	var c4=document.getElementById('imgCanvas').getContext('2d');
+	var img=new Image();
+	img.src="../marker_sprite.png";
+	c4.drawImage(img,1,1);
+})();
+
+(function(){
+	//本地储存localStorage 方法存储的数据没有时间限制。
+	window.localStorage.myname="这个信息可以一直存在";
+	localStorage.visitCount=localStorage.visitCount ? Number(localStorage.visitCount)+1 : 1;
+	//sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。
+	sessionStorage.visitQty=sessionStorage.visitQty ? Number(sessionStorage.visitQty)+1 : 1;
+	var d=document.createElement("div");
+	var p=document.getElementsByClassName("newInputTest");
+	d.className="tableTips";
+	d.innerHTML="这个是本地储存,已经访问第 "+localStorage.visitCount+" 次.  这是会话储存,已经访问第 "+sessionStorage.visitQty+" 次.";
+	p[0].appendChild(d);
+	d.fadein();
+	var times=window.setTimeout(function(){d.fadeout();window.clearTimeout(times);},2000);
+	//var obj={}
+})();
+
+(function(){
+	var p=document.getElementById('progress');
+	var oProgress=window.setInterval(function(){
+		var v=Number(p.value);
+		if(v<1){
+			v+=0.1;
+			p.value=v;
+		}else{
+			window.clearInterval(oProgress);
+			var n=document.createElement("span");
+			n.innerHTML="Loading Completed.";
+			p.parentNode.appendChild(n);
+		}
+	},1000);
+})();
+
+
+</script>
+</body>
+</html>
+
+</body>
+</html>

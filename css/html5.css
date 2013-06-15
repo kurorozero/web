@@ -1,0 +1,22 @@
+*{ padding:0; margin:0;}
+.clear{ clear:both; width:0; height:0; overflow:hidden;}
+
+.nav{ width:800px; margin:0 auto;}
+.nav nav a{width:98px; display:block; float:left;}
+
+.newInputTest,.mediaTest,.canvasTest,.textbox{ width:800px; margin:0 auto;}
+.newInputTest{ position:relative;}
+.tableTips{width:300px; display:block; position:absolute; height:auto; border:1px #333333 solid; top:0; left:0; background-color:#FFF;}
+
+.html5table{ width:800px; padding:10px 5px;}
+.html5table .th{ width:150px;}
+.html5table .block{display:block;}
+.html5table input{display:inline;}
+.fs1{ width:600px;padding:10px 100px; margin:10px;}
+
+
+.testFrm span{ font-size:12px;}
+#progress{ border:none;}
+
+canvas,blockquote{ border:1px #999999 solid;}
+.canvasTest{ width:500px; height:auto;}

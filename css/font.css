@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+body {font-family:'微软雅黑'}
+@font-face {
+font-family:微软雅黑;
+src: url('../font/微软雅黑.eot'); /* ie9 compat modes */
+src: url('../font/微软雅黑.eot?#iefix') format('embedded-opentype'), /* ie6-ie8 */
+  url('../font/微软雅黑.woff') format('woff'), /* modern browsers */
+  url('../font/微软雅黑.ttf')  format('truetype'), /* safari, android, ios */
+  url('../font/微软雅黑.svg#微软雅黑') format('svg'); /* legacy ios */
+}

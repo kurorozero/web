@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div>
+<form id="form-checkbox">
+    <input name="checkbox[]" type="checkbox" value="1" />
+    <input name="checkbox[]" type="checkbox" value="2" />
+    <input name="checkbox[]" type="checkbox" value="3" />
+    <input name="checkbox[]" type="checkbox" value="4" />
+    <input name="checkbox[]" type="checkbox" value="5" />
+    <input name="checkbox[]" type="checkbox" value="6" />
+    <input name="checkbox[]" type="checkbox" value="7" />
+    <input name="checkbox[]" type="checkbox" value="8" />
+</form>
+</div>
+<script type="text/javascript">
+document.onreadystatechange=function(){
+	if(document.readyState && window.console){
+		console.log(document.readyState);
+	}
+}
+
+function test(){
+	var inputboxes = document.getElementById('form-checkbox').getElementsByTagName('input');
+	var checkboxes = [];
+	
+	for(var i=0,count=inputboxes.length;i<count;i++){
+		if(inputboxes[i].type && inputboxes[i].type=='checkbox'){
+			checkboxes.push(inputboxes[i]);
+		}
+	}
+	
+	for(var i=0,count=checkboxes.length;i<count;i++){
+		checkboxes[0].onchange=function(){
+			for(var p in checkboxes){
+				if(p==0)continue;
+				checkboxes[p].checked=!checkboxes[p].checked;
+			}
+		}
+		
+		checkboxes[i].onclick=function(){//for IE 6-7 onchange bug
+			this.blur();
+		}
+	}
+}
+
+function test1(){
+	var arr = document.getElementById('form-checkbox').getElementsByTagName('input');
+	for(var i=0,shu=arr.length;i<shu;i++){
+		arr[i].onclick=function(){
+			this.blur();
+		}
+		
+		arr[i].onchange=function(){
+			if(this.type && this.type=='checkbox'){
+				alert(this.value);
+			}else{
+				return false;
+			}
+		}
+		
+
+	}
+}
+test();
+
+
+</script>
+</body>
+</html>
