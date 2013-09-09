@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" language="javascript" src="kcore.js"></script>
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+#float{ float:right;width:100px; height:50px;}
+.upbtn{ background:url(btn.jpg) no-repeat;}
+</style>
+</head>
+<body>
+<!--    <a style="position:relative;overflow:hidden;" href="javascript:void(0)">
+        upload file
+        <input type="file" style="position:absolute;cursor:pointer;margin:0;opacity:0;padding:0; right:0; top:0; font-size: 118px;" name="upfile1" />
+    </a>
+    <input type="button" value="aaaa" onclick="check()"  />
+	<script type="text/javascript">
+	var upfile1=document.getElementById('upfile1');
+	var check=function(){
+		alert(upfile1.value);
+	}
+	</script>-->
+    <form action="http://localhost/test/test/upload.php" method="post" enctype="multipart/form-data" target="upfile_frame" id="upfrm">
+        <div class="upbtn" style="position:relative; width:100px;height:25px; overflow:hidden;text-align:center;direction:ltr;">
+            <input type="file" style="position:absolute;cursor:pointer;margin:0;opacity:0;padding:0; right:0; top:0; font-size: 118px;" name="upfile" id="upfile" />
+        </div>
+        <input type="text" class="3 numonly" value="0" />
+        <input type="text" class="inputBox numonly ASDFASD" value="0" />
+        <input type="text" class="inputBox numonly SSSS" value="0" /><input type="text" class="inputBox numonly" value="0" />
+        <input type="text" class="inputBox numonly 12312312" value="0" />
+        <input type="text" name="aaa" value="" />
+    </form>
+    <iframe name="upfile_frame" style="display:none;" id="upfile_frame"></iframe>
+   <!-- <div id="float">
+    	<a href="javascript:void(0);">浮了浮了</a>
+    </div>-->
+    <div>
+    <input type="text" name="" value="" class="textbox" />
+    <input type="text" name="" value="" class="textbox" />
+    
+    <div style="float:right; position:relative;"><iframe name="testframe" id="testframe" src="test.html" style=" margin-left:50px;"></iframe></div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+<script type="text/javascript" language="javascript">
+
+addEvent(window,"load",function(){
+	//autoFloat("float");
+//	var value=getTimes();
+//	setCookie('test',value,1);
+//	document.getElementById("upfile").onchange=function(event){
+//		document.getElementById("upfrm").submit();
+//		alert(document.getElementById('upfile_frame').contentWindow);
+//		alert(document.getElementById('upfile_frame').contentDocument);
+//	}
+	//var iframe=getIframe('upfile_frame');
+	//alert(iframe.body.innerHTML);
+	//alert(document.getElementsByTagName('*').length)
+});
+var a=["d","e","f"];
+
+var fr=document.getElementById('testframe');
+
+var getPos=function(el){
+	var left=el.offsetLeft;
+	var top=el.offsetTop;
+	var curEl=el.offsetParent;
+	while(curEl!==null){
+		left += curEl.offsetLeft;
+		top += curEl.offsetTop;
+		curEl = curEl.offsetParent;
+	}
+	var pos={left:left,top:top}
+	return pos;
+}
+fr.onload=function(){
+//	var pos=getPos(fr);
+//	alert(pos.left+ " "+pos.top)
+}
+(function(){
+	var oBoxs=document.getElementsByClassName('textbox');
+	oBoxs.onblur=function(event){
+		
+	}
+})();
+</script>
+
+</body>
+</html>

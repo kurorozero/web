@@ -1,0 +1,55 @@
+<?php
+/**
+ * ÈÎºÎ±àÂë×Ö·û´®×ª»»Îªutf-8
+ *
+ * @param string $str ÊäÈë×Ö·û´®
+ * @return string Êä³öutf-8±àÂë×Ö·û´®
+ */
+function anystring2utf8($str) {
+	$encode = mb_detect_encoding($str,"ASCII,UNICODE,UTF-8,GBK,CP936,EUC-CN,BIG-5,EUC-TW");
+	return ($encode != 'UTF-8' && $encode != 'ASCII' ? iconv($encode,'UTF-8',$str) : $str);
+}
+/**
+ * ÈÎºÎ±àÂë×Ö·û´®×ª»»Îªgbk
+ *
+ * @param string $str ÊäÈë×Ö·û´®
+ * @return string Êä³ögbk±àÂë×Ö·û´®
+ */
+function anystring2gbk($str) {
+	$encode = mb_detect_encoding($str,"ASCII,UNICODE,UTF-8,GBK,CP936,EUC-CN,BIG-5,EUC-TW");
+	return ($encode != 'CP936' && $encode != 'ASCII' && $encode != 'GBK' ? iconv($encode,'GB18030',$str) : $str);
+}
+
+/**
+ * ÈÎºÎ±àÂë×Ö·û´®(Êý×é)×ª»»Îªutf-8
+ *
+ * @param mixed $string ÊäÈë×Ö·û´®(Êý×é)
+ * @return mixed Êä³öutf-8±àÂë×Ö·û´®(Êý×é)
+ */
+function any2utf8($string) {//Í¨¹ýµÝ¹é×ª»»×Ö·û´®±àÂë
+	if(is_array($string)) {
+		foreach($string as $key => $val) {
+			$string[$key] = any2utf8($val); //µÝ¹é
+		}
+	} else {
+		$string = anystring2utf8($string);
+	}
+	return $string;
+}
+/**
+ * ÈÎºÎ±àÂë×Ö·û´®(Êý×é)×ª»»Îªgbk
+ *
+ * @param mixed $string ÊäÈë×Ö·û´®(Êý×é)
+ * @return mixed Êä³ögbk±àÂë×Ö·û´®(Êý×é)
+ */
+function any2gbk($string) {//Í¨¹ýµÝ¹é×ª»»×Ö·û´®±àÂë
+	if(is_array($string)) {
+		foreach($string as $key => $val) {
+			$string[$key] = any2gbk($val); //µÝ¹é
+		}
+	} else {
+		$string = anystring2gbk($string);
+	}
+	return $string;
+}
+?>

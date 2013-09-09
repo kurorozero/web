@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0; padding:0;}
+body{font:13px "微软雅黑",Arial,Tahoma, Helvetica, Sans-Serif;background-color:#E8E8E8}
+a{text-decoration:none;outline:none;hide-focus:expression(this.hideFocus=true);}
+ul{list-style:none}
+img{border:none}
+
+#header{ width:100%;position:fixed;}
+* html/* 修正IE6振动bug */{background-image:url(about:blank);background-attachment:fixed;}
+* html #header{
+	position:absolute; top:expression(eval(document.documentElement.scrollTop)); 
+}
+
+.inner{width:960px; margin:0 auto; position:relative}
+#logo{
+	position:absolute; left:0; top:0;
+	display:inline-block; width:200px; height:70px;
+	font-size:50px; text-align:center;
+	background-color:#ec5f2e; color:#fff; font-weight:bold
+}
+#nav{ height:80px;background-color:#E8E8E8}
+#nav li{float:right}
+#nav li#goTop{float:left;opacity: 0;}
+#nav li a{
+	display:inline-block; line-height:30px; margin:25px 10px; padding:0 10px;
+	letter-spacing:2px; font-weight:bold; color:#000;
+	-moz-transition: all 0.2s ease 0s;
+    border-radius: 3px
+}
+#nav li#goTop a{background-color:#000;color:#fff;}
+#nav a:hover,#nav a.active{background-color:#305ea6; color:#fff}
+
+#headbg{height:9px; overflow:hidden; width:1020px; margin:0 auto;}
+#headbg p{
+	height:9px; background:url('http://static.blueidea.com/attachment/forum/201202/10/200545oihudowcuikctb66.png');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.blueidea.com/attachment/forum/201202/10/200545oihudowcuikctb66.png'); 
+}
+
+#main{text-align:center;_padding-bottom:150px}
+#main div{width:960px; margin:0 auto 100px; height:500px;background-color:#CCCCCC; line-height:500px}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery_easing.js"></script>
+<!--[if IE 6]>
+<style type="text/css">
+</style>
+<script src="DD_belatedPNG.js"></script>
+<script>
+//document.execCommand("BackgroundImageCache", false, true);
+//DD_belatedPNG.fix("#headbg p");
+</script>
+<![endif]-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#headbg").fadeOut(0);
+	var hrefArr = [];
+	var windowH = $(window).height()/4;
+	
+	$("#nav a").each(function(){
+		var href = $(this).attr("href");
+		var top = $(href).offset().top - 150; 
+		hrefArr.push(top);
+		$(this).click(function(){
+			$("body, html").animate({scrollTop: top},{duration: 450},"easeInExpo")
+			return false;
+		});
+	});
+	
+	
+	$(window).scroll(function(){		
+		if ($(window).scrollTop() > 10) {
+			$("#headbg").fadeIn(250);
+			$("#logo").stop().animate({ top: "-70px" }, { queue: false, easing: "swing", duration: 500 });
+			$("#goTop").stop().animate({ opacity: 1 }, { queue: false, easing: "swing", duration: 250 });
+		} else {
+			$("#headbg").fadeOut(250);
+			$("#logo").stop().animate({ top: 0 }, { queue: false, easing: "swing", duration: 500 });
+			$("#goTop").stop().animate({ opacity: 0 }, { queue: false, easing: "swing", duration: 250 });
+		}
+		
+		if(hrefArr.length){
+			scrollTop = $(window).scrollTop();
+			var _top = scrollTop;
+			var _bottom = $(document).height() - scrollTop;
+			for(var i=0; i<hrefArr.length; i++){
+				if(_bottom < ($(window).height()+10)){
+					$("#nav a").removeClass("active").eq(1).addClass("active");
+				} else if(_top > hrefArr[i] - windowH && _top < hrefArr[i] + windowH){
+					$("#nav a").removeClass("active").eq(i).addClass("active");
+				}
+			};
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+    <div class="inner">
+        <div id="logo">logo</div>
+        <ul id="nav">
+            <li id="goTop"><a href="#home">回到顶部</a></li>
+            <li><a href="#contact">联系我们</a></li>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#news">新闻动态</a></li>
+            <li><a href="#case">案&nbsp;例</a></li>        
+        </ul>
+    </div>
+    <div id="headbg"><p></p></div>
+</div>
+<div id="main">
+	<p style="height:150px; "></p>
+	<div id="home">home</div>
+    <div id="case">case</div>
+    <div id="news">news</div>
+    <div id="about">about</div>
+    <div id="contact">contact</div>
+</div>
+</body>
+</html>

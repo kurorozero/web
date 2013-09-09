@@ -210,15 +210,14 @@ $time = substr($init_time,12);
 $datetime = strtotime($date.' '.$time);
 //var_dump($date.' '.$time,$datetime,date("Ymd H:i:s",$datetime));
 echo '<br />-----<br />';
-
-$test = array(1,2,3,4,5);
-$rule = array(2,4,6,8);
-foreach ($test as $val) {
-    # code...
-    if(in_array($val, $rule)){
-        $result = TRUE;
-        break;
-    }
-}
-
-var_dump($result);
+$time = 1254351600;
+$last_date = '2012/09/01';
+$current_date = '2013/09/01';
+$last_time = strtotime($last_date);
+$cur_time = strtotime($current_date);
+$one_year = $cur_time - $last_time;
+echo 'last date: '.date("Y/m/d",$last_time);
+echo ' current date:'.date("Y/m/d",$cur_time);
+echo '<br />';
+echo 'update papers set publish_date = publish_date+'.$one_year.' where publish_date >='.$last_time;
+?>

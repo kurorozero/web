@@ -1,5 +1,5 @@
 // JavaScript Document
-if(!window.$ && !window.mySpace){
+if(!window.$ && !window.jquery !window.mySpace){
 	(function(window){
 		var mySpace=(function(){
 			var mySpace=function(s){
@@ -457,6 +457,12 @@ function getTimes(){
 	m=m<10?"0"+m:m;
 	s=s<10?"0"+s:s;
 	return h+":"+m+":"+s;
+}
+
+//when the user click submit, disable btn
+function onSubmitDisable()
+{
+
 }
 
 function attr(name,d){

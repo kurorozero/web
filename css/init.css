@@ -29,6 +29,7 @@ img{ border:0px;}
 table { 
 	border-collapse: collapse;
 	border-spacing: 0;
+	empty-cells: show;
 }
 
 h1, h2, h3, h4, h5, h6 {font-size: 100%;}  
@@ -54,64 +55,7 @@ a:hover{
 	/*text-decoration:underline; 显示下下划线 */
 }
 
-/** float box 盒子浮动 **/
-.left{float:left;}
-.right{float:right;}
-
-/** clear float 清除浮动 **/
-.clr{
-	clear:both;
-	height:0;
-	line-height:none;
-	overflow:hidden;
-	width:100%;
-    zoom:1;
-}
-
-.clearfix:after{
-    clear:both;
-    content:" ";
-    display:block;
-    height:0;
-    line-height:none;
-    overflow:hidden;
-    visibility:hidden;
-    width:100%;
-    zoom:1;
-}
-
-/** isblock 是否块状元素 **/
-.block{display:block;}
-.inline{display:inline;}
-.hide{display:none;}
-
-/** posittion 元素定位 **/
-.rel{position:relative;}
-.abs{position:absolute;}
-.fix{position:fixed;}
-
-
 /** auto center 自动居中 **/
 #wrapper,.wrapper{
-	margin:0 auto;
-}
-
-/* create Rounded 生成四圆角 */
-.rad{
-	-moz-border-radius: 15px; /* Firefox */
-	-webkit-border-radius: 15px; /* Safari 和 Chrome */
-	border-radius: 15px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-}
-
-/** 生成陰影 **/
-.shadow{
-    -moz-box-shadow:0 5px 15px #000;
-    -webkit-box-shadow:0 5px 15px #000;
-    box-shadow:0 5px 15px #000;
-}
-
-.rad,.shadow{
-    position:relative;
-	z-index:100;
-    behavior:url(../css/ie-css3.htc);
+    margin:0 auto;
 }

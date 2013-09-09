@@ -1,0 +1,5 @@
+<?php 
+ return array(
+ "About school","About school / events","About school / people at school","About school / subjects","About school / things I bring to school","Actions","Actions / about cooking","Actions / about environmental protection","Actions / about good habits","Actions / about housework","Actions / about resolutions","Actions / about daily actions","Actions / related to school rules","Adjectives","Adjectives / about feelings","Adjectives / about people","Adjectives / opposite","Adverbs","Animals and insects","Charity work","Clothing and accessories items","Electronic products","Festivals and celebrations","Food and drinks","Food and drinks / dishes","Food and drinks / fast food and snacks","Food and drinks / fruits and vegetables","Free time activities and hobbies","In the park / country park","Injuries and illnesses","Jobs","Natural disasters and landscape","Objects","People","Places","Prepositions","Sports","Things friends should / shouldn't do","Toys","Transportation and getting around","TV programmes","Weather and seasons","Words for writing stories" 
+);
+?>
